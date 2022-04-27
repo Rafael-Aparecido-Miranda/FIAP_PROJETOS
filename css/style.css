@@ -37,6 +37,7 @@ body{
 
 .page-subtitle{
     margin-top: 10px;
+    background-color: #000;
 }
 img{
     max-height: 250px;
@@ -59,8 +60,28 @@ img{
     cursor: pointer;/*quando passar o cursor o mouse vira mao*/
 }
 
-.botao:hover{/*Editando evento de quando o mouse passa por cima do botao*/
+.botao:hover{/*Editando evento de quando o mouse passa por cima do botao o cursor é mudado*/
     background-color: red;
-
 }
 
+#erro{
+    background-color: red;
+    color: #fff;
+}
+
+#catalogo{
+    display: flex;
+    flex-flow: wrap;
+    padding: 1rem;
+}
+
+.retangulo{
+    width: 50%;
+    height: 35%;
+    background-color: #000;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    left: 20rem;
+}

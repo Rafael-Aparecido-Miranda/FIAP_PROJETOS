@@ -37,12 +37,26 @@ function cadastrar()
 
     if (listaDeFilmes.includes(novoFilme) || listaDeTitulos.includes(novoTitulo.toLowerCase())) {
         erro.innerHTML = `Filme ${novoTitulo} já cadastrado.`
-      }else{
+    }
+    else
+      {
         listaDeFilmes.push(novoFilme)
         listaDeTitulos.push(novoTitulo)
-        //? Vamos chamar uma função para mostrar os filmes
+        mostrarFilmes();
       }
-      document.querySelector('#filme').value = ''
-      document.querySelector('#titulo').value = ''
-
+      document.querySelector('#filme').value = '';
+      document.querySelector('#titulo').value = ''; 
+    }
+function mostrarFilmes()
+{
+    do
+    {
+        catalogo.innerHTML +=
+        `<div class = "filme">
+            <img src = ${listaDeFilmes[i]} alt = ${listaDeTitulos[i]}><figcaption>${listaDeTitulos[i]}
+        </div>`
+        
+        i++
+    }while(i<listaDeFilmes.length)
+    
 }

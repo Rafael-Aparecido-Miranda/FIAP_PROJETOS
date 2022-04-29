@@ -25,3 +25,24 @@ for(i; i<listaDeFilmes.length; i++)
         <figcaption>${listaDeTitulos[i]}</figcaption>
     </div>`;
 }
+
+let filmeRepetido = true;
+
+function cadastrar()
+{
+    console.log("Fui clicado");
+    let novoFilme = document.querySelector('#filme').value;
+    
+    let novoTitulo = document.querySelector('#titulo').value;
+
+    if (listaDeFilmes.includes(novoFilme) || listaDeTitulos.includes(novoTitulo.toLowerCase())) {
+        erro.innerHTML = `Filme ${novoTitulo} já cadastrado.`
+      }else{
+        listaDeFilmes.push(novoFilme)
+        listaDeTitulos.push(novoTitulo)
+        //? Vamos chamar uma função para mostrar os filmes
+      }
+      document.querySelector('#filme').value = ''
+      document.querySelector('#titulo').value = ''
+
+}

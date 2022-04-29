@@ -37,7 +37,7 @@ body{
 
 .page-subtitle{
     margin-top: 10px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.411);
 }
 img{
     max-height: 250px;

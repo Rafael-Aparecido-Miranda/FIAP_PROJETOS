@@ -13,3 +13,7 @@ let listaDeTitulos = [
     'Dagon',
     'Pulp Fiction'
 ];
+
+let catalogo = document.querySelector("#catalogo");
+let i = 0;
+let erro = document.querySelector("#erro");
